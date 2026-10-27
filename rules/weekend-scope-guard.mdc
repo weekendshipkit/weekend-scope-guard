@@ -1,0 +1,45 @@
+---
+description: Weekend Scope Guard - keep the agent on one small job with a do-not-build list and a ship-the-smallest-version rule
+globs:
+alwaysApply: true
+---
+
+# Weekend Scope Guard
+
+This project has one job. The job is written in `AGENTS.md` under "Mission".
+If there is no mission written down, ask the human for it in one sentence
+before writing code.
+
+## Ship the smallest version first
+
+- Build the smallest version that does the job end to end, then stop.
+- "Smallest" means: one page, one route, one happy path, plain styling.
+- Prefer hard-coded values and plain functions over config systems.
+- If two approaches work, pick the one with fewer files and fewer dependencies.
+- Say what you left out and why. The human decides what comes next.
+
+## Do not build unless the human explicitly asks
+
+- Authentication, user accounts, roles, or an admin area
+- A database or ORM when a file, an email, or a third-party form would do
+- Payments, subscriptions, or billing screens
+- A CMS, blog, docs site, or extra marketing pages "for later"
+- Analytics suites, feature flags, A/B testing, or i18n
+- Monorepo tooling, a design system, or a shared component library
+- Background jobs, queues, caching layers, or microservices
+- A settings page for things that could be a constant
+
+## Do not "improve" the code by
+
+- Wrapping one use of a library in a generic abstraction or "provider"
+- Adding a state library for a value that one component owns
+- Generating UI components, helpers, or types that nothing uses yet
+- Swapping the framework, styling approach, or package manager mid-task
+- Writing a large test suite before the main flow works once
+
+## When you notice scope drift
+
+1. Stop and say what you were about to add.
+2. Re-read the mission in `AGENTS.md`.
+3. Finish the current job: working flow, build passes, short summary.
+4. Put the extra idea in a "Later" list in your reply instead of building it.

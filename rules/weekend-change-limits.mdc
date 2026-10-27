@@ -1,0 +1,39 @@
+---
+description: Weekend Change Limits - file-touch limits per request and a plain definition of done
+globs:
+alwaysApply: true
+---
+
+# Weekend Change Limits
+
+Small, readable changes are easier to check than big clever ones.
+
+## Before editing
+
+- List the files you plan to create or change, with one line on why for each.
+- If the list has more than 5 files, stop and propose a smaller first step.
+
+## File-touch limits (per request)
+
+- Change at most 5 files unless the human approves more.
+- Create at most 3 new files unless the human approves more.
+- Add no new dependency without asking first. Name the package and the reason.
+- Do not rename, move, or reformat files that the task does not need.
+- Do not create new top-level folders.
+- Keep one concern per change. Unrelated fixes go in the "Later" list.
+
+## Definition of done
+
+A task is done only when all of these are true:
+
+- The main flow works once, end to end, and you give the exact steps to check it.
+- The project builds (or typechecks) without new errors or warnings you added.
+- No secrets in code. New environment variables are added to `.env.example`.
+- No placeholder logic is left in the main flow. Any stub is named in the summary.
+- Your reply ends with a short summary in plain English:
+  - What changed (files and one line each)
+  - How to test it
+  - What you did not do, and anything that still needs the human
+
+If you cannot meet the definition of done, say which item is missing and why.
+Do not report "done" or "everything works" without the steps to check it.
