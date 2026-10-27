@@ -1,0 +1,12 @@
+{
+  "name": "weekend-scope-guard",
+  "displayName": "Weekend Scope Guard",
+  "version": "1.0.0",
+  "description": "Two small Cursor rules that keep the agent on one job: a do-not-build list, file-touch limits, a definition of done, and a ship-the-smallest-version rule.",
+  "author": {
+    "name": "Weekend Ship Kit"
+  },
+  "repository": "https://github.com/weekendshipkit/weekend-scope-guard",
+  "license": "MIT",
+  "keywords": ["cursor", "rules", "scope", "agents-md", "vibe-coding", "side-projects"]
+}
